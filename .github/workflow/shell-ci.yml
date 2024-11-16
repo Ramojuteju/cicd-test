@@ -1,0 +1,20 @@
+name: Test CD
+
+on:
+push:
+branches:
+-develop
+
+jobs:
+shell-job:
+runs-on: ubuntu_latest
+
+steps:
+-name: Checkout code
+uses: actions/checkout@v3
+
+-name: Test Code
+run: |
+echo: "Hello"
+pwd
+ls
